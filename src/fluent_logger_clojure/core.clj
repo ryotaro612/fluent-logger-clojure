@@ -2,8 +2,6 @@
   (:import (org.fluentd.logger FluentLogger)
            (java.util HashMap)))
 
-
-
 (defn logger
   ([tag-prefix]
    (FluentLogger/getLogger tag-prefix))
@@ -24,5 +22,14 @@
         (.put dic (name k) (get data k)))
       (.log *fluent-logger* tag dic timestamp))))
 
-(defn close [logger] (.close logger))
-(defn flush [logger] (.flush logger))
+(defn close
+  ([logger] (.close logger))
+  ([] (.close *fluent-logger*)))
+
+(defn flush'
+  ([logger] (.flush logger))
+  ([] (.flush *fluent-logger*)))
+
+(defmacro with-log [logger form]
+  `(binding [*fluent-logger* ~logger]
+     ~form))

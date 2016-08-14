@@ -1,14 +1,19 @@
 # fluent-logger-clojure
 
-A Clojure library designed to ... well, that part is up to you.
+Fluent-logger-clojure serves as a simple facade for fluentd
 
 ## Usage
 
-FIXME
+<!--
+    (with-log (logger "tag-prefix")
+       (log "tag" "key" "value")
+       (log "tag" {:a "foo" :b "bar"})
+       (flush)
+       (close))
+-->    
 
 ## License
 
-Copyright © 2016 FIXME
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Apache License, Version 2.0
+

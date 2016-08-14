@@ -14,13 +14,17 @@
 
 (def ^{:dynamic true} *fluent-logger*)
 
-(defn log
-  ([tag key value timestamp] (log tag {key value} timestamp))
+(defn log-ts
+  ([tag key value timestamp] (log-ts tag {key value} timestamp))
   ([tag data timestamp]
     (let [dic (new HashMap)]
       (doseq [k (keys data)]
         (.put dic (name k) (get data k)))
       (.log *fluent-logger* tag dic timestamp))))
+
+(defn log
+  ([tag key value] (log-ts tag key value 0))
+  ([tag data] (log-ts tag data 0)))
 
 (defn close
   ([logger] (.close logger))

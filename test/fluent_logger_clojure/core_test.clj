@@ -2,6 +2,11 @@
   (:require [clojure.test :refer :all]
             [fluent-logger-clojure.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest quickstart
+  (testing "quickstart"
+    (binding [*fluent-logger* (logger "tag-prefix")]
+      (log "tag" "k" "val" 0)))
+  (testing "qucikstart2"
+
+    )
+  )

@@ -8,7 +8,11 @@
   ([tag-prefix]
    (FluentLogger/getLogger tag-prefix))
   ([tag host port]
-   (FluentLogger/getLogger tag host port)))
+   (FluentLogger/getLogger tag host port))
+  ([tag-prefix host port timeout buffer-capacity]
+   (FluentLogger/getLogger tag-prefix host port timeout buffer-capacity))
+  ([tag-prefix host port timeout buffer-capacity reconnector]
+   (FluentLogger/getLogger tag-prefix host port timeout buffer-capacity reconnector)))
 
 (def ^{:dynamic true} *fluent-logger*)
 
@@ -20,3 +24,5 @@
         (.put dic (name k) (get data k)))
       (.log *fluent-logger* tag dic timestamp))))
 
+(defn close [logger] (.close logger))
+(defn flush [logger] (.flush logger))

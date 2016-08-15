@@ -34,6 +34,6 @@
   ([logger] (.flush logger))
   ([] (.flush *fluent-logger*)))
 
-(defmacro with-log [logger form]
+(defmacro with-log [logger form & more]
   `(binding [*fluent-logger* ~logger]
-     ~form))
+     ~form ~@more))

@@ -2,6 +2,13 @@
 
 Fluent-logger-clojure serves as a simple facade for fluentd
 
+## Install
+
+### Leiningen
+
+    [fluent-logger-clojure "0.1.0"]
+    
+
 ## Usage
 
     (with-log (logger "tag-prefix")

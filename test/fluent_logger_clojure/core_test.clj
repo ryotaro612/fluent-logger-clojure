@@ -9,7 +9,6 @@
   :methods [[log [String java.util.Map Long] Boolean]]
   :state state)
 
-
 (defn -init []
   [[] (atom [])])
 

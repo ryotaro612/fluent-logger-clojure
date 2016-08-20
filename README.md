@@ -10,13 +10,14 @@ Fluent-logger-clojure serves as a simple facade for fluentd
     
 
 ## Usage
-
     (with-log (logger "tag-prefix")
        (log "tag" "key" "value")
        (log "tag" {:a "foo" :b "bar"})
        (flush)
        (close))
 
+### Other examples
+See this [post](http://ranceworks.com/2016/08/20/fluentd-clojure.html).
 ## License
 
 Apache License, Version 2.0

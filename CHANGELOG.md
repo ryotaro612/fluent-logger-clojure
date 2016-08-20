@@ -1,4 +1,9 @@
 # Change Log
+
+## [0.1.0.1] -2016-08-20
+### Changed 
+- Add tests
+<!--
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
@@ -22,3 +27,4 @@ All notable changes to this project will be documented in this file. This change
 
 [Unreleased]: https://github.com/your-name/fluent-logger-clojure/compare/0.1.1...HEAD
 [0.1.1]: https://github.com/your-name/fluent-logger-clojure/compare/0.1.0...0.1.1
+-->

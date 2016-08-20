@@ -1,4 +1,4 @@
-# fluent-logger-clojure
+# fluent-logger-clojure [![Build Status](https://travis-ci.org/satokazuma/fluent-logger-clojure.svg?branch=master)](https://travis-ci.org/satokazuma/fluent-logger-clojure)
 
 Fluent-logger-clojure serves as a simple facade for fluentd
 
@@ -6,7 +6,7 @@ Fluent-logger-clojure serves as a simple facade for fluentd
 
 ### Leiningen
 
-    [fluent-logger-clojure "0.1.0"]
+    [fluent-logger-clojure "0.1.0.1"]
     
 
 ## Usage

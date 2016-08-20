@@ -1,4 +1,4 @@
-(defproject fluent-logger-clojure "0.1.0.1-SNAPSHOT"
+(defproject fluent-logger-clojure "0.1.0.1"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Apache License Version 2.0"
